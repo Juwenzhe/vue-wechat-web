@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'FZLTCXHJW--GB1-0';
+  src: url('FZLTCXHJW--GB1-0.woff') format('woff'),
+       url('FZLTCXHJW--GB1-0.ttf') format('truetype'),
+       url('FZLTCXHJW--GB1-0.svg#FZLTCXHJW--GB1-0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '方正兰亭超细黑合并体';
+  src: url('方正兰亭超细黑合并体.eot');
+  src: url('方正兰亭超细黑合并体.woff2') format('woff2'),
+       url('方正兰亭超细黑合并体.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FZLTCXHJW';
+  src: url('FZLTCXHJW--GB1-0.woff') format('woff'),
+       url('FZLTCXHJW.ttf') format('FZLTCXHJW'),
+       url('FZLTCXHJW--GB1-0.svg#FZLTCXHJW--GB1-0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
