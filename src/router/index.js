@@ -62,6 +62,11 @@ const NewDetails = function NewDetails(r) {
     return r(require('../components/NewDetails'));
   }, 'NewDetails');
 }
+const scroll = function scroll(r) {
+  return require.ensure([], function () {
+    return r(require('../components/Scroll'));
+  }, 'scroll');
+}
 
 export default [{
   path: '/',

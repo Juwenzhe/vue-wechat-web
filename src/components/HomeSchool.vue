@@ -37,7 +37,7 @@
             <img class="currency_oa_img" src="../static/currency_oa.png" alt="">
             <div class="currency_oa_teacher">
                 <img src="../static/currency_oa_teacher.png" alt="">
-                <p class="currency_oa_p">通过文本和图片对申报内容进行描述，完成审批流程</p>
+                <p class="currency_oa_p">——通过文本和图片对申报内容进行描述，完成审批流程</p>
             </div>
             <div class="list">
                 <ul>

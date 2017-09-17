@@ -13,47 +13,47 @@
             <img class="standard_mode_img" src="../static/standard_mode_img04.png" alt="">
     
             <!--<div class="standard_mode_introduce">
-                            <div class="introduce_title">
-                                <p class="p_title">学校宣传</p>
-                                <p class="p_content">校园文化&nbsp;&nbsp;&nbsp;新闻公告</p>
-                                <p class="p_content">欢迎标语</p>
+                                <div class="introduce_title">
+                                    <p class="p_title">学校宣传</p>
+                                    <p class="p_content">校园文化&nbsp;&nbsp;&nbsp;新闻公告</p>
+                                    <p class="p_content">欢迎标语</p>
+                                </div>
+                                <div class="introduce_img">
+                                    <img src="../static/school_advertise_img.png" alt="">
+                                </div>
                             </div>
-                            <div class="introduce_img">
-                                <img src="../static/school_advertise_img.png" alt="">
+                            <div class="standard_mode_introduce">
+                                <div class="introduce_title">
+                                    <p class="p_title">公共信息</p>
+                                    <p class="p_content">天气预报&nbsp;&nbsp;&nbsp;穿衣指数</p>
+                                    <p class="p_content">时间日期</p>
+                                </div>
+                                <div class="introduce_img">
+                                    <img src="../static/public_msg.png" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="standard_mode_introduce">
-                            <div class="introduce_title">
-                                <p class="p_title">公共信息</p>
-                                <p class="p_content">天气预报&nbsp;&nbsp;&nbsp;穿衣指数</p>
-                                <p class="p_content">时间日期</p>
+                            <div class="standard_mode_introduce">
+                                <div class="introduce_title">
+                                    <p class="p_title">教学办公</p>
+                                    <p class="p_content">电子课程表&nbsp;&nbsp;&nbsp;授课信息</p>
+                                    <p class="p_content">二维码签到&nbsp;&nbsp;&nbsp;考勤汇总</p>
+                                    <p class="p_content">学生个人课表查询</p>
+                                    <p class="p_content">满足走板教学需求</p>
+                                </div>
+                                <div class="introduce_img">
+                                    <img src="../static/class_schedule.png" alt="">
+                                </div>
                             </div>
-                            <div class="introduce_img">
-                                <img src="../static/public_msg.png" alt="">
-                            </div>
-                        </div>
-                        <div class="standard_mode_introduce">
-                            <div class="introduce_title">
-                                <p class="p_title">教学办公</p>
-                                <p class="p_content">电子课程表&nbsp;&nbsp;&nbsp;授课信息</p>
-                                <p class="p_content">二维码签到&nbsp;&nbsp;&nbsp;考勤汇总</p>
-                                <p class="p_content">学生个人课表查询</p>
-                                <p class="p_content">满足走板教学需求</p>
-                            </div>
-                            <div class="introduce_img">
-                                <img src="../static/class_schedule.png" alt="">
-                            </div>
-                        </div>
-                        <div class="standard_mode_introduce">
-                            <div class="introduce_title">
-                                <p class="p_title">班级动态</p>
-                                <p class="p_content">班级奖状</p>
-                                <p class="p_content">学生荣誉奖状</p>
-                            </div>
-                            <div class="introduce_img">
-                                <img src="../static/class_culture.png" alt="">
-                            </div>
-                        </div>-->
+                            <div class="standard_mode_introduce">
+                                <div class="introduce_title">
+                                    <p class="p_title">班级动态</p>
+                                    <p class="p_content">班级奖状</p>
+                                    <p class="p_content">学生荣誉奖状</p>
+                                </div>
+                                <div class="introduce_img">
+                                    <img src="../static/class_culture.png" alt="">
+                                </div>
+                            </div>-->
         </div>
         <!--会议模式-->
         <div class="mode">
@@ -75,8 +75,15 @@
             <img class="title custom_title" src="../static/custom_mode_title.png" alt="">
     
             <div class="rolls">
-                <img class="img img_emergency" src="../static/custom_mode_img.png" alt="">
+                <img class="rolls_emergency" src="../static/custom_mode_img.png" alt="">
+                <div class="rolls_p">
+                        <p>自定义后台网页编辑展示</p>
+                        <p>自定义网页链接展示</p>
+                        <p>自定义图片展示</p>
+                    </div>
                 <div class="custom_mode_swiper">
+                    <img src="../static/banpai.png" alt="">
+                    
                     <swiper :options="swiperOption" ref="mySwiper" class="swiper-no-swiping">
                         <swiper-slide>
                             <img class="swiper_img" src="../static/custom_mode_img01.png" alt="">
@@ -146,165 +153,70 @@
 </script>
 
 <style scoped>
- @media screen and (max-width: 370px) {
-         #class_card {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        margin-top: 15%;
-    }
-    
-    .custom_mode_swiper {
-        position: absolute;
-        width: 39%;
-        height: 20px;
-        top: 0.69em;
-        left: 1.67em;
-    }
-    
-    .rolls {
-        width: 100%;
-        position: relative;
-        margin: 0 auto;
-    }
-    .swiper_img {
-        width: 100%;
-    }
-    .standard_mode_img {
-        width: 100%;
-        display: block;
-        margin-bottom: 2.5em;
-    }
-    .standard_mode_img01 {
-        margin-top: 5em;
-    }
-    .title {
-        width: 45%;
-        display: block;
-        margin: 0 auto 4em;
-    }
-    
-    .custom_title {
-        width: 50% !important;
-    }
-    
-    .img {
-        width: 80%;
-        display: block;
-        margin: 2em auto;
-    }
-    
-    .img_w {
-        width: 95% !important;
-        margin-right: 0;
-        margin-top: 4.5em !important;
-    }
-    
-    .img_test {
-        width: 100% !important;
-        margin-top: 4.5em !important;
-    }
-    
-    .img_emergency {
-        width: 100% !important;
-        margin-top: 4.5em !important;
-    }
-    
-    .p_title {
-        font-size: 1rem;
-        margin-bottom: 0.5em;
-    }
-    
-    .p_content {
-        font-size: 0.8rem;
-        color: #858585;
-    }
-    
-    .class_card {
-        width: 100%;
-        height: 110%;
-    }
-    
-    .classcard_title {
-        width: 90%;
-        display: block;
-        position: absolute;
-        margin: 3em auto;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 99;
-    }
-    
-    .classcard_img {
-        width: 100%;
-        display: block;
-        position: absolute;
-    }
-    
-    .mode {
-        position: relative;
-        width: 100%;
-        margin-bottom: 8em;
-    }
-    
-    .standard_mode_introduce {
-        width: 100%;
-        background: #fcfcfc;
-        display: flex;
-        padding: 1.2em 0.5em;
-        box-sizing: border-box;
-    }
-    
-    .introduce_title {
-        width: 45%;
-    }
-    
-    .introduce_img {
-        width: 55%;
-    }
-    
-    .introduce_img img {
-        width: 100%;
-    }
- }
- @media screen and (min-width: 370px) {
     #class_card {
         width: 100%;
         height: 100%;
         position: relative;
-        margin-top: 15%;
+        margin-top: 14%;
     }
-    
+    .swiper-no-swiping {
+        width: 164px;
+        height: 320px;
+        position: absolute;
+        top: 11px;
+        left: 25px;
+    }
+    .rolls_p {
+        width: 170px;
+        height: 100px;
+        /* background: blue; */
+        position: absolute;
+        top: 35px;
+        left: 14rem;
+        font-size: 0.8rem;
+    }
+    .rolls_p p {
+        margin-bottom: 5px;
+    }
     .custom_mode_swiper {
         position: absolute;
-        width: 39.5%;
+        width: 230px;
         height: 20px;
-        top: 0.5em;
-        left: 1.9em;
+        top: 35px;
+        left: 5px;
     }
-    
+    .custom_mode_swiper img {
+        width: 100%;
+    }
     .rolls {
         width: 100%;
         position: relative;
         margin: 0 auto;
+        /* height: 500px; */
+        /* background: red; */
+    }
+    .rolls_emergency {
+        position: relative;
+        width: 100% !important;
+        margin-top: 220px;
     }
     .swiper_img {
-        width: 102%;
+        width: 100%;
     }
+    
     .standard_mode_img {
         width: 100%;
         display: block;
         margin-bottom: 2.5em;
     }
+    
     .standard_mode_img01 {
         margin-top: 5em;
     }
+    
     .title {
         width: 45%;
         display: block;
-        margin: 0 auto;
         margin: 0 auto 4em;
     }
     
@@ -392,6 +304,4 @@
     .introduce_img img {
         width: 100%;
     }
- }
-
 </style>

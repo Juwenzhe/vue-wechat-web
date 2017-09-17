@@ -15,7 +15,7 @@
       </div>
       <div class="history">
         <img class="history_title" src="../static/development_history.png" alt="">
-        <img class="history_bg" src="../static/history_bg.png" alt="" >
+        <img class="history_bg" src="../static/history_bg.png" alt="">
         <div class="history_content">
           <p>2016年，家校通在温州市瓯江小学、温州市白鹿外国语学校、杭州市澎博小学、丁兰实验中学、瑞安养正学校正式上线。</p>
           <p>2017年，电子班牌在温州市白鹿外国语学校，温州市智慧校园示范校——乐清白象中学上线。自公司成立、产品面市以来，得到广大用户一致认可，校领导高度赞扬。</p>
@@ -39,132 +39,380 @@
 </template>
 <script>
   export default {
-        created() {
-            document.title = "关于我们";
-            document.documentElement.scrollTop = 0;
-            window.pageYOffset = 0;
-            document.body.scrollTop = 0;
-        }
+    created() {
+      document.title = "关于我们";
+      document.documentElement.scrollTop = 0;
+      window.pageYOffset = 0;
+      document.body.scrollTop = 0;
+    }
   }
 </script>
 
 <style scoped>
-  #about_us {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin-top: 16%;
+  @media screen and (max-width: 370px) {
+    #about_us {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 16%;
+    }
+    .ercode {
+      width: 60%;
+      display: block;
+      margin: 2em auto;
+    }
+    .ercode_p {
+      font-size: 0.9rem;
+      margin: 0 auto;
+      text-align: center;
+      color: #858585;
+    }
+    .about_us {
+      width: 100%;
+      height: 100%;
+    }
+    .about_us_title {
+      width: 100%;
+      height: 50px;
+    }
+    .about_us_title img {
+      width: 60%;
+      display: block;
+      float: right;
+      margin-top: 12%;
+      position: relative;
+    }
+    .about_us_content {
+      width: 90%;
+      position: relative;
+      margin: 20% auto;
+    }
+    .about_us_content p {
+      text-align: justify;
+      text-indent: 2em;
+      line-height: 27px;
+      font-size: 1rem;
+      color: #858585;
+    }
+    /*愿景*/
+    .vision {
+      width: 100%;
+      height: 70%;
+    }
+    .vision_img {
+      width: 85%;
+      display: block;
+      margin: 0 auto;
+    }
+    .vision_p1 {
+      font-size: 1rem;
+      color: #858585;
+      text-indent: 3em;
+      line-height: 50px;
+    }
+    .vision_p2 {
+      font-size: 1rem;
+      color: #858585;
+      text-indent: 1.5em;
+    }
+    /*发展历程*/
+    .history {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 30px;
+    }
+    .history_title {
+      width: 65%;
+    }
+    .history_bg {
+      width: 100%;
+      display: block;
+      position: absolute;
+      margin-top: 10%;
+    }
+    .history_content {
+      position: relative;
+      width: 90%;
+      margin: 25% auto;
+    }
+    .history_content p {
+      color: #FFFFFF;
+      line-height: 25px;
+      text-indent: 2em;
+      text-align: justify;
+      font-size: 0.9rem;
+    }
+    /*联系我们*/
+    .connect_us {
+      width: 100%;
+      height: 60%;
+      position: relative;
+    }
+    .connect_us_title {
+      width: 100%;
+      height: 100px;
+      text-align: right;
+    }
+    .connect_us_title img {
+      width: 70%;
+    }
+    .connect_us_content {
+      width: 80%;
+      margin: 0 auto;
+      line-height: 30px;
+      font-size: 1rem;
+      color: #858585;
+      padding-left: 3em;
+    }
+    .connect_us_content p:first-letter {
+      margin-left: -2.5em;
+    }
   }
-  .ercode {
-    width: 60%;
-    display: block;
-    margin: 2em auto;
+  
+  @media screen and (min-width: 370px) {
+    #about_us {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 16%;
+    }
+    .ercode {
+      width: 60%;
+      display: block;
+      margin: 2em auto;
+    }
+    .ercode_p {
+      font-size: 0.9rem;
+      margin: 0 auto;
+      text-align: center;
+      color: #858585;
+    }
+    .about_us {
+      width: 100%;
+      height: 100%;
+    }
+    .about_us_title {
+      width: 100%;
+      height: 50px;
+    }
+    .about_us_title img {
+      width: 60%;
+      display: block;
+      float: right;
+      margin-top: 12%;
+      position: relative;
+    }
+    .about_us_content {
+      width: 90%;
+      position: relative;
+      margin: 20% auto;
+    }
+    .about_us_content p {
+      text-align: justify;
+      text-indent: 2em;
+      line-height: 27px;
+      font-size: 1rem;
+      color: #858585;
+      margin-right: 50px;
+      
+    }
+    /*愿景*/
+    .vision {
+      width: 100%;
+      height: 70%;
+    }
+    .vision_img {
+      width: 85%;
+      display: block;
+      margin: 0 auto;
+    }
+    .vision_p1 {
+      font-size: 1rem;
+      color: #858585;
+      text-indent: 3em;
+      line-height: 50px;
+    }
+    .vision_p2 {
+      font-size: 1rem;
+      color: #858585;
+      text-indent: 1.5em;
+    }
+    /*发展历程*/
+    .history {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 30px;
+    }
+    .history_title {
+      width: 65%;
+    }
+    .history_bg {
+      width: 100%;
+      display: block;
+      position: absolute;
+      margin-top: 10%;
+    }
+    .history_content {
+      position: relative;
+      width: 90%;
+      margin: 25% auto;
+    }
+    .history_content p {
+      color: #FFFFFF;
+      line-height: 25px;
+      text-indent: 2em;
+      text-align: justify;
+      font-size: 0.9rem;
+    }
+    /*联系我们*/
+    .connect_us {
+      width: 100%;
+      height: 60%;
+      position: relative;
+    }
+    .connect_us_title {
+      width: 100%;
+      height: 100px;
+      text-align: right;
+    }
+    .connect_us_title img {
+      width: 70%;
+    }
+    .connect_us_content {
+      width: 80%;
+      margin: 0 auto;
+      line-height: 30px;
+      font-size: 1rem;
+      color: #858585;
+      padding-left: 3em;
+    }
+    .connect_us_content p:first-letter {
+      margin-left: -2.5em;
+    }
   }
-  .ercode_p {
-    font-size: 0.9rem;
-    margin: 0 auto;
-    text-align: center;
-    color: #858585;
+  
+  @media screen and (min-width: 410px) {
+    #about_us {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 16%;
+    }
+    .ercode {
+      width: 60%;
+      display: block;
+      margin: 2em auto;
+    }
+    .ercode_p {
+      font-size: 0.9rem;
+      margin: 0 auto;
+      text-align: center;
+      color: #858585;
+    }
+    .about_us {
+      width: 100%;
+      height: 100%;
+    }
+    .about_us_title {
+      width: 100%;
+      /* height: 50px; */
+    }
+    .about_us_title img {
+      width: 60%;
+      display: block;
+      float: right;
+      margin-top: 12%;
+      position: relative;
+    }
+    .about_us_content {
+      width: 90%;
+      position: relative;
+      margin: 20% auto;
+    }
+    .about_us_content p {
+      text-align: justify;
+      text-indent: 2em;
+      line-height: 27px;
+      font-size: 1rem;
+      color: #858585;
+      margin-right: 60px;
+    }
+    /*愿景*/
+    .vision {
+      width: 100%;
+      height: 70%;
+    }
+    .vision_img {
+      width: 85%;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+    .vision_p1 {
+      font-size: 1rem;
+      color: #858585;
+      text-indent: 3em;
+      line-height: 50px;
+    }
+    .vision_p2 {
+      font-size: 1rem;
+      color: #858585;
+      text-indent: 1.5em;
+    }
+    /*发展历程*/
+    .history {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 30px;
+    }
+    .history_title {
+      width: 65%;
+    }
+    .history_bg {
+      width: 100%;
+      display: block;
+      position: absolute;
+      margin-top: 10%;
+    }
+    .history_content {
+      position: relative;
+      width: 90%;
+      margin: 22% auto;
+    }
+    .history_content p {
+      color: #FFFFFF;
+      line-height: 35px;
+      text-indent: 2em;
+      text-align: justify;
+      font-size: 01rem;
+    }
+    /*联系我们*/
+    .connect_us {
+      width: 100%;
+      height: 60%;
+      position: relative;
+    }
+    .connect_us_title {
+      width: 100%;
+      height: 100px;
+      text-align: right;
+    }
+    .connect_us_title img {
+      width: 70%;
+    }
+    .connect_us_content {
+      width: 80%;
+      margin: 0 auto;
+      line-height: 30px;
+      font-size: 1rem;
+      color: #858585;
+      padding-left: 3em;
+    }
+    .connect_us_content p:first-letter {
+      margin-left: -2.5em;
+    }
   }
-  .about_us {
-    width: 100%;
-    height: 100%;
-  }
-  .about_us_title {
-    width: 100%;
-    height: 50px;
-  }
-  .about_us_title img{
-    width: 60%;
-    display: block;
-    float: right;
-    margin-top: 12%;
-    position: relative;
-  }
-  .about_us_content {
-    width: 90%;
-    position: relative;
-    margin: 20% auto;
-  }
-  .about_us_content p {
-    text-align: justify;
-    text-indent: 2em;
-    line-height: 27px;
-    font-size: 1rem;
-    color: #858585;
-  }
-  /*愿景*/
-  .vision {
-    width: 100%;
-    height: 70%;
-  }
-  .vision_img {
-    width: 85%;
-    display: block;
-    margin: 0 auto;
-  }
-  .vision_p1 {
-    font-size: 1rem;
-    color: #858585;
-    text-indent: 3em;
-    line-height: 50px;
-  }
-  .vision_p2 {
-    font-size: 1rem;
-    color: #858585;
-    text-indent: 1.5em;
-  }
-  /*发展历程*/
-  .history {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin-top: 30px;
-  }
-  .history_title {
-    width: 65%;
-  }
-  .history_bg {
-    width: 100%;
-    display: block;
-    position: absolute;
-    margin-top: 10%;
-  }
-  .history_content {
-    position: relative;
-    width: 90%;
-    margin: 25% auto;
-  }
-  .history_content p {
-    color: #FFFFFF;
-    line-height: 25px;
-    text-indent: 2em;
-    text-align: justify;
-    font-size: 0.9rem;
-  }
-  /*联系我们*/
-  .connect_us {
-    width: 100%;
-    height: 60%;
-    position: relative;
-  }
-  .connect_us_title {
-    width: 100%;
-    height: 100px;
-    text-align: right;
-  }
-  .connect_us_title img {
-    width: 70%;
-  }
-  .connect_us_content {
-    width: 80%;
-    margin: 0 auto;
-    line-height: 30px;
-    font-size: 1rem;
-    color: #858585;
-    padding-left: 3em;
-  }
-  .connect_us_content p:first-letter {
-    margin-left: -2.5em;
-}
 </style>

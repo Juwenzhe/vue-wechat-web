@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 dist/
+臻财公众号2017811.zip
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

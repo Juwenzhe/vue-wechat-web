@@ -42,6 +42,9 @@
                         <li class="title_one" v-on:click="changeState">
                             <router-link class="title_one" to="/TopHeader/AboutUS" tag="a">关于我们</router-link>
                         </li>
+                        <li class="title_one">
+                            <a href="../../help/index.html">xxxxx</a>
+                        </li>
                     </ul>
                     <div class="logo">
                         <img class="logo_img" src="../static/logo.png" alt="">
@@ -90,11 +93,7 @@
     
     .fade-enter,
     .fade-leave-to
-    /* .fade-leave-active in <2.1.8 */
-    
     {
-        /*opacity: 0;*/
-        /*transform: scale(0,1);*/
         transform: translateX(54%);
     }
     

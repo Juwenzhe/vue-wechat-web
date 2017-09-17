@@ -1,9 +1,9 @@
 <template>
     <div id="news">
         <img class="title" src="../static/news_title.png" alt="">
-        <ul>
-            <!--<router-link :to="{name: 'NewDetails', params:{id: item.id, type: item.contenttype}}" v-for="item in news.data" v-bind:key="item" tag="li">-->
-            <li v-on:click="jump(index, item.id, item.contenttype)" v-for="(item,index) in news.data" v-bind:key="item">
+    
+        <ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
+            <li v-on:click="jump(index, item.id, item.contenttype)" v-for="(item,index) in news" v-bind:key="item">
                 <div class="content">
                     <div class="news_title">
                         <p class="p_title">{{ item.title.split('=')[0] }}</p>
@@ -19,18 +19,38 @@
             </li>
             <br>
         </ul>
-    
+        <!-- <p v-show="loading" class="page-infinite-loading">
+            <mt-spinner type="fading-circle"></mt-spinner> -->
+            <div v-show="loading" class="loader">
+                <div class="loader-inner line-scale-party" > 
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        <!-- </p> -->
     </div>
 </template>
 
 <script>
-    // import {getNews} from "../data/getData"
+    import { getNews, newDetails } from "../data/getData"
+
     export default {
         data() {
             return {
-                news: {},
+                loading: false,
+                loadState: false,
+                scrolState: true,
+                news: [
+
+                ],
+                middle: [],
+                newsData: [],
                 newsImgState: '',
-                contents: {}
+                contents: {},
+                pageIndex: 0,
+                scrollDisable: false
             }
         },
         created() {
@@ -40,49 +60,80 @@
             document.body.scrollTop = 0;
         },
         mounted() {
-            this.$http({
-                method: 'post',
-                url: 'http://manager.zcxiaolian.com/message/newsnoticelist?campusid=7&pageindex=1&pagesize=10&type=109'
-            }).then(data => this.news = data.data)
+            getNews(this.pageIndex).then(data => this.news = data.data.data)
+            // window.addEventListener('scroll', this.loadMore);
+            
+        },
+        computed: {
+
         },
         methods: {
+            loadMore() {
+                this.loading = true;
+                this.pageIndex = this.pageIndex + 1;
+                getNews(this.pageIndex).then(data => this.middle = data.data.data);
+                this.news.push(...this.middle);
+                
+                var self = this;
+                setTimeout(() => {
+                    // let last = this.news[this.news.length - 1];
+                    // for (let i = 1; i <= 10; i++) {
+                    // }
+                    this.loading = false;
+                }, 2500);
+            },
+            // loadMore() {
+            //     if (document.body.scrollTop == document.body.scrollHeight - document.body.clientHeight) {
+            //         getNews(this.pageIndex).then(data => this.middle = data.data.data);
+            //         this.scrollDisable = true;
+            //         this.pageIndex = this.pageIndex + 1;
+            //         var self = this;
+            //         setTimeout(function() {
+            //             self.scrollDisable = false;
+            //             self.news.push(...self.middle);
+            //             console.log(self)
+            //         }, 1000)
+
+            //         // this.loading()
+            //     }
+            // },
+            // loading() {
+            //     setTimeout(function () {
+            //         this.scrollDisable = false;
+            //         console.log('xxxx' + this.scrollDisable)
+            //     }, 3000)
+            // },
             jump: function (index, id, type) {
                 if (type === 1) {
-                    this.$router.push({ name: 'NewDetails',params: { id: id, type: type }})
+                    this.$router.push({ name: 'NewDetails', params: { id: id, type: type } })
                 } else if (type === 2) {
-                    this.$http({
-                        method: 'post',
-                        url: 'http://manager.zcxiaolian.com/message/newsnoticedetail?',
-                        data: {
-                            id: id
-                        }
-                    }).then(datas => location.href = datas.data.data.content);
-                    // this.$http({
-                    //     method: 'post',
-                    //     url: 'http://manager.zcxiaolian.com/message/newsnoticedetail?',
-                    //     data: {
-                    //         id: id
-                    //     }
-                    // }).then(function(datas){
-                    //     location.href = datas.data.data.content;
-                    // }.bind(this));
-                    // console.log(_self.contents.content)
+                    newDetails(id, type);
                 }
             }
-        },
-        conputed() {
-            // 判断新闻有没有缩略图
-
         }
     }
 </script>
 
-<style scoped>
+<style >
     #news {
         position: relative;
         width: 100%;
         /*height: 100%;*/
-        margin-top: 15%;
+        margin-top: 14%;
+    }
+    
+    .loader-inner>div {
+        background: rgba(0, 0, 0, 0.5);
+        width: 8px;
+        height: 8px;
+    }
+    
+    .loader {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        height: 40px;
     }
     
     .title {

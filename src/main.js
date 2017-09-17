@@ -5,15 +5,23 @@ import App from './App'
 // import VueRouter from './router'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
+// import Vonic from 'vonic'
 import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import Vonic from 'vonic'
+import Mint from 'mint-ui';
+
+import './plugins/jquery.min.js'
+import './plugins/loaders.css.js'
+import './plugins/loaders.min.css'
 
 Vue.config.productionTip = false
 Vue.use(Vuex);
 Vue.use(VueRouter)
 Vue.use(VueAwesomeSwiper)
-Vue.prototype.$http = axios
+Vue.use(Mint);
+
+// Vue.use(Vonic)
+// Vue.prototype.$http = axios
 
 import routes from './router/index.js'
 
@@ -26,7 +34,7 @@ var router = new VueRouter({
 })
 
 /* eslint-disable no-new */
-new Vue(Vonic.app, {
+new Vue({
   router,
   render: h => h(App)
 }).$mount('#app');
