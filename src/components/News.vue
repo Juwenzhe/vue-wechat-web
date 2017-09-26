@@ -61,7 +61,6 @@
         },
         mounted() {
             getNews(this.pageIndex).then(data => this.news = data.data.data)
-            // window.addEventListener('scroll', this.loadMore);
             
         },
         computed: {
@@ -107,7 +106,7 @@
                 if (type === 1) {
                     this.$router.push({ name: 'NewDetails', params: { id: id, type: type } })
                 } else if (type === 2) {
-                    newDetails(id, type);
+                    this.newDetails(id, type);
                 }
             }
         }
@@ -118,7 +117,6 @@
     #news {
         position: relative;
         width: 100%;
-        /*height: 100%;*/
         margin-top: 14%;
     }
     
@@ -152,7 +150,6 @@
     
     .news_title {
         width: 100%;
-        /*height: 100px;*/
         margin: 0 auto;
         position: relative;
         border-bottom: 1px solid #E3EFF9;
@@ -193,7 +190,6 @@
         padding: 20px 0 0 0;
         width: 90%;
         margin: 0 auto;
-        /*text-align: justify;*/
     }
     
     .p_content {

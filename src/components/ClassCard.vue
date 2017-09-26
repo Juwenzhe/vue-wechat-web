@@ -167,9 +167,7 @@
         left: 25px;
     }
     .rolls_p {
-        width: 170px;
         height: 100px;
-        /* background: blue; */
         position: absolute;
         top: 35px;
         left: 14rem;

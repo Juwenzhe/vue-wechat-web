@@ -42,9 +42,9 @@
                         <li class="title_one" v-on:click="changeState">
                             <router-link class="title_one" to="/TopHeader/AboutUS" tag="a">关于我们</router-link>
                         </li>
-                        <li class="title_one">
-                            <a href="../../help/index.html">xxxxx</a>
-                        </li>
+                        <!-- <li class="title_one">
+                            <a target="_blank" href="../../help/index.html">帮助</a>
+                        </li> -->
                     </ul>
                     <div class="logo">
                         <img class="logo_img" src="../static/logo.png" alt="">

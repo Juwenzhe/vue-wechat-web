@@ -7,6 +7,7 @@
     <meta name="viewport" content="user-scaleable=no, width=device-width, initial-scale=1, minimum-scale=1">
     <title>臻财智慧科技</title>
     <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="./css/banner.css">
     <script src="./js/vue2.4.2.js"></script>
 
     <style>
@@ -14,71 +15,407 @@
             background: #fff;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
-            color:#000;
+            color: #000;
             margin: 0;
             padding: 0;
         }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
         .swiper-container {
             width: 100%;
-            /* height: 348px!important; */
-            /* padding-top: 50px; */
-            /* padding-bottom: 50px; */
-            /* background: red; */
+            background: #9EE0FF;
+            height: 240px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 -2px 2px rgba(0, 0, 0, 0.2); */
+            overflow: hidden;
+            /* text-align: center; */
         }
+
+        .swiper-wrapper {
+            width: 100px!important;
+        }
+        .boxshadow {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1), 0 -2px 20px rgba(0, 0, 0, 0.18);
+        }
+        .swiper-container2 {
+            width: 100%;
+            background: #FF9E9E;
+            height: 240px;
+            margin-bottom: 20px;
+           
+            overflow: hidden;
+        }
+
+        .swiper-container3 {
+            width: 100%;
+            background: #8ee5e3;
+            height: 240px;
+            margin-bottom: 20px;
+            /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 -2px 2px rgba(0, 0, 0, 0.2); */
+            overflow: hidden;
+        }
+
+        .swiper-container4 {
+            width: 100%;
+            background: #b8c6ff;
+            height: 240px;
+            /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 -2px 2px rgba(0, 0, 0, 0.2); */
+        }
+
         .swiper-slide {
             background-position: center;
             background-size: cover;
             width: 300px;
-            height: 180px;
+            height: 140px;
+            background: url(./images/bg_noactive.png) no-repeat;
+            background-size: 100% 100%;
+            margin-top: 75px!important;
         }
-        .swiper-slide-active {
-            background: red;
+
+        .swiper-container .swiper-slide-active {
             height: 190px;
-            margin-right: 20px;
-            /* margin-top: 10px; */
+            margin-top: 50px!important;
+            background: url(./images/bind_bg.png) no-repeat;
+            background-size: 100% 100%;
         }
-        #content {
+
+        .swiper-container2 .swiper-slide-active {
+            height: 190px;
+            margin-top: 50px!important;
+            background: url(./images/homework_bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .swiper-container3 .swiper-slide-active {
+            height: 190px;
+            margin-top: 50px!important;
+            background: url(./images/xuanke_bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .swiper-container4 .swiper-slide-active {
+            height: 190px;
+            margin-top: 50px!important;
+            background: url(./images/qunfa_bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .bg {
             width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            font-size: 26px;
+            font-weight: 300;
+            position: absolute;
+            top: 20px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        .content {
+            width: 90%;
+            height: 60px;
+            margin: 60px auto;
+            display: flex;
+        }
+
+        .left {
+            flex: 1.8;
+        }
+
+        .left_img {
+            width: 140px;
+            margin-left: 15px;
+        }
+
+        .left_p {
+            font-size: 12px;
+            color: #858585;
+            margin-left: 15px;
+            margin-top: 24px;
+        }
+
+        .left_p2 {
+            font-size: 12px;
+            color: #858585;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .right {
+            flex: 1;
+            text-align: center;
+        }
+
+        .right_img {
+            width: 90px;
+            margin-top: 8px;
+        }
+
+        .teacher_bind_left_img {
+            width: 60px;
+            margin-left: 15px;
+        }
+
+        .teacher_bind_right_img {
+            width: 50px;
+        }
+
+        .p_title {
+            color: #9EE0FF;
+            font-size: 20px;
+            line-height: 0;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .four_img {
+            width: 80px;
+            margin-left: 15px;
         }
     </style>
 </head>
 
 <body>
-            <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" ></div>
-                        <div class="swiper-slide" ></div>
-                        <div class="swiper-slide" ></div>
-                        <div class="swiper-slide" ></div>
-                        <div class="swiper-slide" ></div>
+    <div id="body">
+        <div class="banner">
+            <p class="caozuo">
+                操作指南
+                <div class="button">
+                    <div v-if="state" class="hb" v-on:click="changeState()">
+                        <span class="span span_a"></span>
+                        <span class="span span_b"></span>
+                        <span class="span span_a"></span>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div v-cloak v-show="!state"  v-on:click="changeState()">
+                        <span class=" span_c"></span>
+                        <span class=" span_d"></span>
+                    </div>
+                </div>
+            </p>
+            <transition name="fade">
+                <div id="sidebar" class="sidebar" v-if="!state">
+                    <div v-cloak class="right_slider">
+                        <ul class="ul_one">
+                            <li class="title_three"><a href="./index.html">操作指南</a></li>
+                            <li class="title_one">
+                                <span v-on:click="bindingState()">绑定账号</span>
+                                <ul v-show="listState" class="ul_two">
+                                    <li><a href="./cardbinding.html">班牌绑定</a></li>
+                                    <li><a href="./teacherbinding.html">教师绑定</a></li>
+                                    <li><a href="./Parentbinding.html">家长绑定</a></li>
+                                    <li><a href="./doublebinding.html">老师家长双绑定</a></li>
+                                    <li><a href="./MoreSbinding.html">多个学生绑定</a></li>
+                                </ul>
+                            </li>
+                            <li class="title_two">
+                                <span v-on:click="changeHomeWorkState()">每日作业</span>
+                                <ul v-show="homeworkState" class="ul_two">
+                                    <li><a href="./dayjobteacher.html">教师版</a></li>
+                                    <li><a href="./dayjobteacher.html">家长版</a></li>
+                                </ul>
+                            </li>
+                            <li class="title_two">
+                                <span v-on:click="changexuankeState()">选课系统</span>
+                                    <ul v-show="xuankeState" class="ul_two">
+                                        <li><a href="./root.html">管理员版</a></li>
+                                        <li><a href="./teacher.html">教师版</a></li>
+                                        <li><a href="./xuankeparent.html">家长版</a></li>
+                                        <li><a href="./Check.html">审核版</a></li>
+                                    </ul>
+                            </li>
+                            <li class="title_two">
+                                <a href="./Massmessager.html">消息群发</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </transition>
+        </div>
+        <div class="swiper" v-bind:class="{fliter_blur: !state}">
+            <div class="swiper-container boxshadow">
+                <p class="title">绑定账号</p>
+                <div class="swiper-wrapper">
+                    <a href="./cardbinding.html" class="swiper-slide">
+                        <!-- <a href="./cardbinding.html"></a> -->
+                        <div class="content">
+                            <div class="left">
+                                <!-- <img class="left_img" src="./images/students.png" alt=""> -->
+                                <p class="p_title">班牌绑定</p>
+                                <p class="left_p">绑定电子班牌 切换模式</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/students_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./teacherbinding.html" class="swiper-slide">
+                        <!-- <p class="title">绑定账号</p> -->
+                        <div class="content">
+                            <div class="left">
+                                <!-- <img class="teacher_bind_left_img" src="./images/teacher_bind.png" alt=""> -->
+                                <p class="p_title">教师版</p>
+                                <p class="left_p">绑定教师账号</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/teacher_bind_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./Parentbinding.html" class="swiper-slide">
+                        <!-- <p class="title">绑定账号</p> -->
+                        <div class="content">
+                            <div class="left">
+                                <!-- <img class="teacher_bind_left_img" src="./images/parents.png" alt=""> -->
+                                <p class="p_title">家长版</p>
+                                <p class="left_p">一个或两个家长绑定单个孩子账号</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/parents_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./MoreSbinding.html" class="swiper-slide">
+                        <!-- <p class="title">绑定账号</p> -->
+                        <div class="content">
+                            <div class="left">
+                                <!-- <img class="left_img" src="./images/students.png" alt=""> -->
+                                <p class="p_title">多个学生版</p>
+                                <p class="left_p">一个家长绑定多个学生账号</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/students_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./doublebinding.html" class="swiper-slide">
+                        <!-- <p class="title">绑定账号</p> -->
+                        <div class="content">
+                            <div class="left">
+                                <!-- <img class="left_img" src="./images/teacher_parent_bind.png" alt=""> -->
+                                <p class="p_title">教师家长双绑定</p>
+                                <p class="left_p">用于老师的孩子也在学校上课</p>
+                            </div>
+                            <div class="right">
+                                <img class="right_img" src="./images/change01.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-container2 boxshadow">
+                <p class="title">每日作业</p>
+                <div class="swiper-wrapper">
+                    <a href="./dayjobteacher.html" class="swiper-slide">
+                        <div class="content">
+                            <div class="left">
+                                <img class="teacher_bind_left_img" src="./images/homework_teacher.png" alt="">
+                                <p class="left_p2">布置作业 查看完成情况</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/homework_teacher_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./dayjobParent.html" class="swiper-slide ">
+                        <div class="content">
+                            <div class="left">
+                                <img class="teacher_bind_left_img" src="./images/homework_parent.png" alt="">
+                                <p class="left_p2">监督孩子完成作业 进行反馈</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/homework_parent_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-container3 boxshadow">
+                <p class="title">选课系统</p>
+                <div class="swiper-wrapper">
+                    <a href="./root.html" class="swiper-slide">
+                        <div class="content">
+                            <div class="left">
+                                <img class="four_img" src="./images/xuanke_root.png" alt="">
+                                <p class="left_p2">开启开课权限</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/xuanke_root_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./teacher.html" class="swiper-slide">
+                        <div class="content">
+                            <div class="left">
+                                <img class="teacher_bind_left_img" src="./images/xuanke_teacher.png" alt="">
+                                <p class="left_p2">选择开课任务</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/xuanke_teacher_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./xuankeparent.html" class="swiper-slide">
+                        <div class="content">
+                            <div class="left">
+                                <img class="teacher_bind_left_img" src="./images/xuankeparent_img.png" alt="">
+                                <p class="left_p2">选择课程</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/xuankeparent_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./check.html" class="swiper-slide">
+                        <div class="content">
+                            <div class="left">
+                                <img class="teacher_bind_left_img" src="./images/xuanke_check.png" alt="">
+                                <p class="left_p2">同意或拒绝开课申请</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/xuanke_check_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-container4 boxshadow">
+                <p class="title">消息群发</p>
+                <div class="swiper-wrapper">
+                    <a href="./Massmessager.html" class="swiper-slide">
+                        <div class="content">
+                            <div class="left">
+                                <img class="teacher_bind_left_img" src="./images/qunfa_title.png" alt="">
+                                <p class="left_p2">操作简单 提升效率</p>
+                            </div>
+                            <div class="right">
+                                <img class="teacher_bind_right_img" src="./images/qunfa_icon.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
         
+        </div>
+
+    </div>
+
+
     <!-- Swiper JS -->
     <script src="./js/swiper-3.4.2.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-       var mySwiper = new Swiper('.swiper-container', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        effect: 'coverflow', //3d滑动
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        loop:true,
-        slidesPerView: 1.2,
-        coverflow: {
-            rotate: 0,  //设置为0
-            stretch: 1,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true
-        }   
-    });
-    </script>
+    <script src="./js/banner.js"></script>
 </body>
 
 </html>

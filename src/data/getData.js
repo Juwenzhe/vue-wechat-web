@@ -9,15 +9,6 @@ var getNews = function getNews(pageindex) {
         pageindex: pageindex,
         pagesize: 10,
         type: 109
-
-        // g_tk: 5381,
-        // uin: 0,
-        // format: 'json',
-        // inCharset: 'utf-8',
-        // notice: 0,
-        // platform: 'h5',
-        // needNewCode: 1,
-        // _: 1504679526726
     })
 };
 
