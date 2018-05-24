@@ -26,9 +26,9 @@
           <img src="../static/contact_us.png" alt="">
         </div>
         <div class="connect_us_content">
-          <p>邮箱: yang@zcxiaolian.com</p>
+          <p>邮箱: xl@zcxiaolian.com</p>
           <p>电话: 0571-86811981</p>
-          <p>地址: 浙江省杭州市滨江区火炬大道581号三维大厦C座504</p>
+          <p>地址: 浙江省杭州市西湖数园软件园11幢1楼杭州臻财科技</p>
         </div>
         <img class="ercode" src="../static/ercode.png" alt="">
         <p class="ercode_p">如果您有合作意愿或相关建议，欢迎与我们联系</p>
@@ -49,7 +49,6 @@
 </script>
 
 <style scoped>
-  @media screen and (max-width: 370px) {
     #about_us {
       width: 100%;
       height: 100%;
@@ -59,10 +58,10 @@
     .ercode {
       width: 60%;
       display: block;
-      margin: 2em auto;
+      margin: 30px auto;
     }
     .ercode_p {
-      font-size: 0.9rem;
+      font-size: 16px;
       margin: 0 auto;
       text-align: center;
       color: #858585;
@@ -89,9 +88,9 @@
     }
     .about_us_content p {
       text-align: justify;
-      text-indent: 2em;
+      text-indent: 30px;
       line-height: 27px;
-      font-size: 1rem;
+      font-size: 18px;
       color: #858585;
     }
     /*愿景*/
@@ -105,15 +104,15 @@
       margin: 0 auto;
     }
     .vision_p1 {
-      font-size: 1rem;
+      font-size: 18px;
       color: #858585;
       text-indent: 3em;
       line-height: 50px;
     }
     .vision_p2 {
-      font-size: 1rem;
+      font-size: 18px;
       color: #858585;
-      text-indent: 1.5em;
+      text-indent: 28px;
     }
     /*发展历程*/
     .history {
@@ -139,9 +138,9 @@
     .history_content p {
       color: #FFFFFF;
       line-height: 25px;
-      text-indent: 2em;
+      text-indent: 30px;
       text-align: justify;
-      font-size: 0.9rem;
+      font-size: 18px;
     }
     /*联系我们*/
     .connect_us {
@@ -161,258 +160,12 @@
       width: 80%;
       margin: 0 auto;
       line-height: 30px;
-      font-size: 1rem;
+      font-size: 18px;
       color: #858585;
-      padding-left: 3em;
+      padding-left: 60px;
     }
     .connect_us_content p:first-letter {
       margin-left: -2.5em;
     }
-  }
   
-  @media screen and (min-width: 370px) {
-    #about_us {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      margin-top: 16%;
-    }
-    .ercode {
-      width: 60%;
-      display: block;
-      margin: 2em auto;
-    }
-    .ercode_p {
-      font-size: 0.9rem;
-      margin: 0 auto;
-      text-align: center;
-      color: #858585;
-    }
-    .about_us {
-      width: 100%;
-      height: 100%;
-    }
-    .about_us_title {
-      width: 100%;
-      height: 50px;
-    }
-    .about_us_title img {
-      width: 60%;
-      display: block;
-      float: right;
-      margin-top: 12%;
-      position: relative;
-    }
-    .about_us_content {
-      width: 90%;
-      position: relative;
-      margin: 20% auto;
-    }
-    .about_us_content p {
-      text-align: justify;
-      text-indent: 2em;
-      line-height: 27px;
-      font-size: 1rem;
-      color: #858585;
-      margin-right: 50px;
-      
-    }
-    /*愿景*/
-    .vision {
-      width: 100%;
-      height: 70%;
-    }
-    .vision_img {
-      width: 85%;
-      display: block;
-      margin: 0 auto;
-    }
-    .vision_p1 {
-      font-size: 1rem;
-      color: #858585;
-      text-indent: 3em;
-      line-height: 50px;
-    }
-    .vision_p2 {
-      font-size: 1rem;
-      color: #858585;
-      text-indent: 1.5em;
-    }
-    /*发展历程*/
-    .history {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      margin-top: 30px;
-    }
-    .history_title {
-      width: 65%;
-    }
-    .history_bg {
-      width: 100%;
-      display: block;
-      position: absolute;
-      margin-top: 10%;
-    }
-    .history_content {
-      position: relative;
-      width: 90%;
-      margin: 25% auto;
-    }
-    .history_content p {
-      color: #FFFFFF;
-      line-height: 25px;
-      text-indent: 2em;
-      text-align: justify;
-      font-size: 0.9rem;
-    }
-    /*联系我们*/
-    .connect_us {
-      width: 100%;
-      height: 60%;
-      position: relative;
-    }
-    .connect_us_title {
-      width: 100%;
-      height: 100px;
-      text-align: right;
-    }
-    .connect_us_title img {
-      width: 70%;
-    }
-    .connect_us_content {
-      width: 80%;
-      margin: 0 auto;
-      line-height: 30px;
-      font-size: 1rem;
-      color: #858585;
-      padding-left: 3em;
-    }
-    .connect_us_content p:first-letter {
-      margin-left: -2.5em;
-    }
-  }
-  
-  @media screen and (min-width: 410px) {
-    #about_us {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      margin-top: 16%;
-    }
-    .ercode {
-      width: 60%;
-      display: block;
-      margin: 2em auto;
-    }
-    .ercode_p {
-      font-size: 0.9rem;
-      margin: 0 auto;
-      text-align: center;
-      color: #858585;
-    }
-    .about_us {
-      width: 100%;
-      height: 100%;
-    }
-    .about_us_title {
-      width: 100%;
-      /* height: 50px; */
-    }
-    .about_us_title img {
-      width: 60%;
-      display: block;
-      float: right;
-      margin-top: 12%;
-      position: relative;
-    }
-    .about_us_content {
-      width: 90%;
-      position: relative;
-      margin: 20% auto;
-    }
-    .about_us_content p {
-      text-align: justify;
-      text-indent: 2em;
-      line-height: 27px;
-      font-size: 1rem;
-      color: #858585;
-      margin-right: 60px;
-    }
-    /*愿景*/
-    .vision {
-      width: 100%;
-      height: 70%;
-    }
-    .vision_img {
-      width: 85%;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 25px;
-    }
-    .vision_p1 {
-      font-size: 1rem;
-      color: #858585;
-      text-indent: 3em;
-      line-height: 50px;
-    }
-    .vision_p2 {
-      font-size: 1rem;
-      color: #858585;
-      text-indent: 1.5em;
-    }
-    /*发展历程*/
-    .history {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      margin-top: 30px;
-    }
-    .history_title {
-      width: 65%;
-    }
-    .history_bg {
-      width: 100%;
-      display: block;
-      position: absolute;
-      margin-top: 10%;
-    }
-    .history_content {
-      position: relative;
-      width: 90%;
-      margin: 22% auto;
-    }
-    .history_content p {
-      color: #FFFFFF;
-      line-height: 35px;
-      text-indent: 2em;
-      text-align: justify;
-      font-size: 01rem;
-    }
-    /*联系我们*/
-    .connect_us {
-      width: 100%;
-      height: 60%;
-      position: relative;
-    }
-    .connect_us_title {
-      width: 100%;
-      height: 100px;
-      text-align: right;
-    }
-    .connect_us_title img {
-      width: 70%;
-    }
-    .connect_us_content {
-      width: 80%;
-      margin: 0 auto;
-      line-height: 30px;
-      font-size: 1rem;
-      color: #858585;
-      padding-left: 3em;
-    }
-    .connect_us_content p:first-letter {
-      margin-left: -2.5em;
-    }
-  }
 </style>

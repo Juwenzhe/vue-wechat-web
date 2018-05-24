@@ -19,8 +19,6 @@
             </li>
             <br>
         </ul>
-        <!-- <p v-show="loading" class="page-infinite-loading">
-            <mt-spinner type="fading-circle"></mt-spinner> -->
             <div v-show="loading" class="loader">
                 <div class="loader-inner line-scale-party" > 
                     <div></div>
@@ -29,7 +27,6 @@
                     <div></div>
                 </div>
             </div>
-        <!-- </p> -->
     </div>
 </template>
 
@@ -75,38 +72,14 @@
                 
                 var self = this;
                 setTimeout(() => {
-                    // let last = this.news[this.news.length - 1];
-                    // for (let i = 1; i <= 10; i++) {
-                    // }
                     this.loading = false;
                 }, 2500);
             },
-            // loadMore() {
-            //     if (document.body.scrollTop == document.body.scrollHeight - document.body.clientHeight) {
-            //         getNews(this.pageIndex).then(data => this.middle = data.data.data);
-            //         this.scrollDisable = true;
-            //         this.pageIndex = this.pageIndex + 1;
-            //         var self = this;
-            //         setTimeout(function() {
-            //             self.scrollDisable = false;
-            //             self.news.push(...self.middle);
-            //             console.log(self)
-            //         }, 1000)
-
-            //         // this.loading()
-            //     }
-            // },
-            // loading() {
-            //     setTimeout(function () {
-            //         this.scrollDisable = false;
-            //         console.log('xxxx' + this.scrollDisable)
-            //     }, 3000)
-            // },
             jump: function (index, id, type) {
                 if (type === 1) {
                     this.$router.push({ name: 'NewDetails', params: { id: id, type: type } })
                 } else if (type === 2) {
-                    this.newDetails(id, type);
+                    newDetails(id, type);
                 }
             }
         }
@@ -117,7 +90,7 @@
     #news {
         position: relative;
         width: 100%;
-        margin-top: 14%;
+        margin-top: 50px;
     }
     
     .loader-inner>div {
@@ -161,7 +134,7 @@
     
     .news_content p {
         color: #858585;
-        font-size: 1rem;
+        font-size: 18px;
     }
     
     .news_img {
@@ -176,7 +149,7 @@
     }
     
     .create_time {
-        font-size: 0.9rem;
+        font-size: 16px;
         color: #BCBCBC;
         width: 89%;
         display: block;
@@ -193,7 +166,7 @@
     }
     
     .p_content {
-        font-size: 0.8rem;
+        font-size: 16px;
         display: block;
         padding: 20px 0;
         width: 90%;
@@ -202,6 +175,6 @@
     }
     
     li {
-        margin-bottom: 2em;
+        margin-bottom: 30px;
     }
 </style>

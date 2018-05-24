@@ -68,6 +68,18 @@ const scroll = function scroll(r) {
   }, 'scroll');
 }
 
+const xcourse = function scroll(r) {
+  return require.ensure([], function () {
+    return r(require('../components/XCourse'));
+  }, 'xcourse');
+}
+
+const servicecenter = function scroll(r) {
+  return require.ensure([], function () {
+    return r(require('../components/ServiceCenter'));
+  }, 'servicecenter');
+}
+
 export default [{
   path: '/',
   component: App, //顶层路由，对应index.html
@@ -116,6 +128,14 @@ export default [{
         {
           path: 'News',
           component: News
+        },
+        {
+          path: 'xcourse',
+          component:xcourse
+        },
+        {
+          path: 'servicecenter',
+          component:servicecenter
         }
 
       ]

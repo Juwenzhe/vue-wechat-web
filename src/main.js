@@ -2,13 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-// import VueRouter from './router'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-// import Vonic from 'vonic'
 import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import Mint from 'mint-ui';
+import Mint from 'mint-ui'
+import 'lib-flexible'
+
 
 import './plugins/jquery.min.js'
 import './plugins/loaders.css.js'

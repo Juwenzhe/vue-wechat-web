@@ -63,7 +63,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        margin-top: 18.8%;
+        margin-top: 50px;
     }
 
     /*智能手环*/
@@ -82,10 +82,8 @@
     
     .smart_bracelet_p {
         color: #858585;
-        font-size: 0.8rem;
+        font-size: 14px;
         margin-top: 6%;
-        /*letter-spacing: 0.5px;*/
-        /*font-size: 14px;*/
     }
     
     .smart_bracelet02 {
@@ -124,7 +122,6 @@
         top: 30%;
         left: 8%;
         border-radius: 5px;
-        /*background: red;*/
     }
     
     .information_push03 {
@@ -140,7 +137,7 @@
         margin-top: 10%;
         margin-left: 20%;
         line-height: 35px;
-        font-size: 1rem;
+        font-size: 18px;
         color: #333333;
     }
     
@@ -150,8 +147,7 @@
         height: 22%;
         top: 65%;
         left: 6%;
-        /*background: red;*/
-        font-size: 0.9rem;
+        font-size: 17px;
         color: #858585;
     }
     
@@ -188,7 +184,7 @@
         text-align: right;
         position: absolute;
         line-height: 25px;
-        font-size: 1rem;
+        font-size: 18px;
         color: #858585;
     }
     
@@ -215,7 +211,7 @@
     
     .health_data02 {
         color: #858585;
-        font-size: 0.8rem;
+        font-size: 16px;
         margin-top: 6%;
         letter-spacing: 0.5px;
         font-size: 14px;

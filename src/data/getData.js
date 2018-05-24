@@ -17,13 +17,6 @@ var newDetails = function newDetails(id, type) {
     axios.post('http://manager.zcxiaolian.com/message/newsnoticedetail', {
         id: id
     }).then(datas => location.href = datas.data.data.content)
-    // axios({
-    //     method: 'post',
-    //     url: 'http://manager.zcxiaolian.com/message/newsnoticedetail',
-    //     data: {
-    //         id: id
-    //     }
-    // }).then(datas => location.href = datas.data.data.content)
 }
 
 export {

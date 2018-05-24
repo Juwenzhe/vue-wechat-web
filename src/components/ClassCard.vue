@@ -11,49 +11,6 @@
             <img class="standard_mode_img" src="../static/standard_mode_img02.png" alt="">
             <img class="standard_mode_img" src="../static/standard_mode_img03.png" alt="">
             <img class="standard_mode_img" src="../static/standard_mode_img04.png" alt="">
-    
-            <!--<div class="standard_mode_introduce">
-                                <div class="introduce_title">
-                                    <p class="p_title">学校宣传</p>
-                                    <p class="p_content">校园文化&nbsp;&nbsp;&nbsp;新闻公告</p>
-                                    <p class="p_content">欢迎标语</p>
-                                </div>
-                                <div class="introduce_img">
-                                    <img src="../static/school_advertise_img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="standard_mode_introduce">
-                                <div class="introduce_title">
-                                    <p class="p_title">公共信息</p>
-                                    <p class="p_content">天气预报&nbsp;&nbsp;&nbsp;穿衣指数</p>
-                                    <p class="p_content">时间日期</p>
-                                </div>
-                                <div class="introduce_img">
-                                    <img src="../static/public_msg.png" alt="">
-                                </div>
-                            </div>
-                            <div class="standard_mode_introduce">
-                                <div class="introduce_title">
-                                    <p class="p_title">教学办公</p>
-                                    <p class="p_content">电子课程表&nbsp;&nbsp;&nbsp;授课信息</p>
-                                    <p class="p_content">二维码签到&nbsp;&nbsp;&nbsp;考勤汇总</p>
-                                    <p class="p_content">学生个人课表查询</p>
-                                    <p class="p_content">满足走板教学需求</p>
-                                </div>
-                                <div class="introduce_img">
-                                    <img src="../static/class_schedule.png" alt="">
-                                </div>
-                            </div>
-                            <div class="standard_mode_introduce">
-                                <div class="introduce_title">
-                                    <p class="p_title">班级动态</p>
-                                    <p class="p_content">班级奖状</p>
-                                    <p class="p_content">学生荣誉奖状</p>
-                                </div>
-                                <div class="introduce_img">
-                                    <img src="../static/class_culture.png" alt="">
-                                </div>
-                            </div>-->
         </div>
         <!--会议模式-->
         <div class="mode">
@@ -157,7 +114,7 @@
         width: 100%;
         height: 100%;
         position: relative;
-        margin-top: 14%;
+        margin-top: 50px;
     }
     .swiper-no-swiping {
         width: 164px;

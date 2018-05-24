@@ -89,9 +89,9 @@
     }
     
     p {
-        font-size: 12px;
+        font-size: 0.4rem;
         color: #858585;
-        line-height: 20px;
+        line-height: 0.8rem;
     }
     
     /*家校通*/
@@ -147,7 +147,7 @@
 
     }
     .micro_portal_p p {
-        font-size: 0.95rem;
+        font-size: 0.45rem;
         color: #333333;
     }
     .micro_portal_phone {
@@ -171,7 +171,7 @@
         left: 0;
     }
     .micro_portal_p02 p {
-        font-size: 0.85rem;
+        font-size: 0.5rem;
         color: #858585;
         margin-left: 0.9em;
         margin-bottom: 1.5em;
@@ -228,7 +228,7 @@
     }
     
     .parent_p {
-        font-size: 0.8rem;
+        font-size: 0.4rem;
         color: #333333;
         display: block;
         /*position: absolute;*/
@@ -250,7 +250,7 @@
         /*display: inline-block;*/
         margin-top: 10%;
         float: right;
-        font-size: 0.8rem;
+        font-size: 0.4rem;
         color: #333333;
         display: block;
     }
@@ -298,13 +298,13 @@
         float: right;
         margin-top: 165%;
         margin-right: 5%;
-        font-size: 0.75rem;
+        font-size: 0.45rem;
     }
     .list {
         position: absolute;
         right: 6%;
         top: 11.5%;
-        font-size: 0.95rem;
+        font-size: 0.5rem;
         /*font-size: 15px;*/
         color: #333333;
     }
@@ -357,8 +357,8 @@
         margin-left: 5%;
     }
     .msg_manage_p1 p {
-        font-size: 0.94rem;
-        line-height: 25px;
+        font-size: 0.5rem;
+        line-height: 26px;
     }
     .grade {
         position: relative;
@@ -382,7 +382,7 @@
     }
     .msg_manage_p2 p {
         margin-bottom: 4%;
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         color: #858585;
         letter-spacing: 1px;
         margin-left: 0.9em;

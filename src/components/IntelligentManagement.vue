@@ -68,7 +68,7 @@
 </script>
 
 <style scoped>
-    @media screen and (max-width: 370px) {
+    /* @media screen and (max-width: 370px) { */
         #intelligent_management {
             width: 100%;
             height: 100%;
@@ -84,7 +84,7 @@
             width: 100%;
             display: block;
             position: absolute;
-            margin-top: 15%;
+            margin-top: 50px;
         }
         .introduce_title {
             position: absolute;
@@ -101,13 +101,13 @@
             line-height: 60px;
             color: #FFFFFF;
             font-family: "FZLTCXHJW";
-            font-size: 2rem;
+            font-size: 30px;
             margin-left: 24%;
             letter-spacing: 1px;
         }
         .simple_introduce_en {
             font-family: "FZLTCXHJW";
-            font-size: 0.8rem;
+            font-size: 18px;
             font-style: italic;
             margin-left: 20%;
             color: #CAC8C8;
@@ -122,7 +122,7 @@
             margin-left: 40%;
             font-family: "FZLTCXHJW";
             /*letter-spacing: 0.7px;*/
-            font-size: 0.9rem;
+            font-size: 18px;
             /*font-size: 14px;*/
             line-height: 25px;
             color: #FFFFFF;
@@ -139,13 +139,13 @@
         .industry_policy_title {
             font-family: "FZLTCXHJW";
             letter-spacing: 1px;
-            font-size: 2rem;
+            font-size: 30px;
             line-height: 25px;
             color: #FFFFFF;
         }
         .industry_policy_title_en {
             font-family: "FZLTCXHJW";
-            font-size: 0.8rem;
+            font-size: 18px;
             font-style: italic;
             color: #CAC8C8;
             margin-top: 3%;
@@ -162,7 +162,7 @@
             font-family: "FZLTCXHJW";
             color: #333333;
             line-height: 30px;
-            font-size: 0.9rem;
+            font-size: 18px;
             text-align: left;
             position: absolute;
             left: 11%;
@@ -170,19 +170,19 @@
             width: 65%;
         }
         .p_first {
-            text-indent: 2em;
+            text-indent: 30px;
         }
         /*智慧校园管理云平台*/
         .introduce_cloud {
             position: absolute;
             width: 100%;
             height: 100%;
-            top: 195%;
+            top: 200%;
             text-align: center;
         }
         .introduce_cloud p {
             font-family: "FZLTCXHJW";
-            font-size: 1.7rem;
+            font-size: 28px;
             color: #060518;
             letter-spacing: 1px;
         }
@@ -198,170 +198,13 @@
         .introduce_cloud_content p {
             font-family: "FZLTCXHJW";
             color: #333333;
-            font-size: 1rem;
+            font-size: 18px;
             text-align: justify;
-            text-indent: 2em;
+            text-indent: 30px;
             line-height: 28px;
         }
-    }
+    /* } */
     
     
-    @media screen and (min-width: 370px) {
-        #intelligent_management {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
     
-        .introduce {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: #2d3132;
-        }
-    
-        .introduce_bg {
-            width: 100%;
-            display: block;
-            position: absolute;
-            margin-top: 15%;
-        }
-    
-        .introduce_title {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            top: 15%;
-        }
-    
-        .left_label {
-            width: 19%;
-            float: left;
-            margin-top: 5%;
-        }
-    
-        .simple_introduce {
-            line-height: 60px;
-            color: #FFFFFF;
-            font-family: "FZLTCXHJW";
-            font-size: 2rem;
-            margin-left: 24%;
-            letter-spacing: 1px;
-        }
-    
-        .simple_introduce_en {
-            font-family: "FZLTCXHJW";
-            font-size: 0.8rem;
-            font-style: italic;
-            margin-left: 20%;
-            color: #CAC8C8;
-        }
-    
-        .introduce_content {
-            position: absolute;
-            width: 95%;
-            top: 35%;
-        }
-    
-        .introduce_content p {
-            margin-left: 47%;
-            font-family: "FZLTCXHJW";
-            /*letter-spacing: 0.7px;*/
-            font-size: 1rem;
-            /*font-size: 16px;*/
-            line-height: 28px;
-            color: #FFFFFF;
-            text-align: justify;
-        }
-    
-    
-        /*行业政策*/
-        .industry_policy {
-            width: 100%;
-            position: absolute;
-            bottom: -10%;
-            ;
-            text-align: center;
-        }
-    
-        .industry_policy_title {
-            font-family: "FZLTCXHJW";
-            letter-spacing: 1px;
-            font-size: 2rem;
-            line-height: 25px;
-            color: #FFFFFF;
-        }
-    
-        .industry_policy_title_en {
-            font-family: "FZLTCXHJW";
-            font-size: 0.8rem;
-            font-style: italic;
-            color: #CAC8C8;
-            margin-top: 3%;
-        }
-    
-        .industry_policy_content {
-            position: absolute;
-            width: 100%;
-            /*margin-top: 10%;*/
-        }
-    
-        .industry_policy_img {
-            width: 94%;
-        }
-    
-        .industry_policy_content_p {
-            font-family: "FZLTCXHJW";
-            color: #333333;
-            line-height: 30px;
-            font-size: 1rem;
-            font-size: 27pz;
-            text-align: left;
-            position: absolute;
-            left: 12%;
-            top: 21%;
-            width: 60%;
-        }
-    
-        .p_first {
-            text-indent: 2em;
-        }
-    
-    
-        /*智慧校园管理云平台*/
-        .introduce_cloud {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 195%;
-            text-align: center;
-        }
-    
-        .introduce_cloud p {
-            font-family: "FZLTCXHJW";
-            font-size: 1.7rem;
-            color: #060518;
-            letter-spacing: 1px;
-        }
-    
-        .introduce_cloud img {
-            width: 90%;
-        }
-    
-        .introduce_cloud_content {
-            width: 88%;
-            text-align: left;
-            margin: 15px auto;
-            /*position: relative;*/
-        }
-    
-        .introduce_cloud_content p {
-            font-family: "FZLTCXHJW";
-            color: #333333;
-            font-size: 1rem;
-            text-align: justify;
-            text-indent: 2em;
-            line-height: 28px;
-        }
-    }
 </style>
